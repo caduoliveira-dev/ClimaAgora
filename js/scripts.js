@@ -1,6 +1,6 @@
 // Variaveis e elementos
 const apiKey = '76aa465ac2f032f4649377a3e8626635';
-const apiPais = 'https://www.countryflagicons.com/FLAT/64/';
+
 
 const cidadeInput = document.querySelector('#cidade-input');
 const botaoPesquisar = document.querySelector('#pesquisar');
@@ -31,7 +31,7 @@ const mostrarDadosClima = async (cidade) => {
 
     climaIconElemento.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
 
-    paisElemento.setAttribute("src", `https://www.countryflagicons.com/FLAT/64/${data.sys.country}.png`);
+    paisElemento.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/64.png`);
 
     umidadeElemento.innerText = `${data.main.humidity}%`;
     ventoElemento.innerText = `${data.wind.speed}km/h`;
